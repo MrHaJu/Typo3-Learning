@@ -1,0 +1,60 @@
+page = PAGE
+page {
+    includeCSS {
+        bootstrap-icons = EXT:vt12/Resources/Public/Css/bootstrap-icons.css
+        css = EXT:vt12/Resources/Public/Css/styles.css
+        custom = EXT:vt12/Resources/Public/Css/custom.css
+    }
+
+
+    includeJSFooter {
+        Bootstrap = EXT:vt12/Resources/Public/JavaScript/bootstrap.bundle.min.js
+        scripts = EXT:vt12/Resources/Public/JavaScript/scripts.js
+    }
+
+    meta {
+        viewport = width=device-width, initial-scale=1.0, shrink-to-fit=no
+        description = Typo3 12.4 Video Tutorial
+        keywords = keywords, keywords, keywords
+        author = Andreas Huppertz
+        robots = index,follow
+        generator = TYPO3
+    }
+
+    shortcutIcon = EXT:vt12/Resources/Public/Icons/favicon.ico
+    10 = FLUIDTEMPLATE
+    10 {
+        layoutRootPath = EXT:vt12/Resources/Private/Layouts/
+        partialRootPath = EXT:vt12/Resources/Private/Partials/
+        templateRootPath = EXT:vt12/Resources/Private/Templates/
+
+#        file = EXT:vt12/Resources/Private/Templates/Default.html
+       file.stdWrap.cObject = CASE
+        file.stdWrap.cObject {
+            key.data = pagelayout
+
+            pagets__layoutwithheader = TEXT
+            pagets__layoutwithheader.value = EXT:vt12/Resources/Private/Templates/Default.html
+            pagets__layoutwithoutheader = TEXT
+            pagets__layoutwithoutheader.value = EXT:vt12/Resources/Private/Templates/withoutHeader.html
+
+            default < .pagets__layoutwithheader
+
+        }
+
+        variables {
+            content0 < styles.content.get
+
+            content1 < styles.content.get
+            content1.select.where = {#colPos} = 1
+        }
+        settings {
+            rootUid = {$vt12.rootUid}
+            logoFile = {$vt12.logoFile}
+            logoAlt = {$vt12.logoAlt}
+            logoTitle = {$vt12.logoTitle}
+            logoHeight = {$vt12.logoHeight}
+        }
+    }
+
+}

@@ -1,0 +1,29 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewwHelpers" data-namespace-typo3-fluid="true">
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <f:for each="{mainMenu}" as="item">
+            <f:if condition="{item.children}">
+                <f:then>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle{f:if(condition: item.active, then: ' nav-active')}" id="navbarDropdown{item.data.uid}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{item.title}</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown{item.data.uid}">
+                            <f:for  each="{item.children}" as="item">
+                                <li class="nav-item dropdown">
+                                    <f:link.typolink parameter="{item.data.uid}" class="dropdown-item {f:if(condition: item.current, then: ' nav-current')}" title="{item.title}" target="{item.target}">{item.title}</f:link.typolink>
+                                </li>
+                            </f:for>
+                        </ul>
+                    </li>
+                </f:then>
+                <f:else>
+                    <li class="nav-item">
+                        <f:link.typolink class="nav-link{f:if(condition: item.current, then: ' nav-current')}" parameter="{item.data.uid}" target="{item.target}" title="{item.title}">{item.title}</f:link.typolink>
+                    </li>
+                </f:else>
+            </f:if>
+        </f:for>
+    </ul>
+</div>
+
+</html>

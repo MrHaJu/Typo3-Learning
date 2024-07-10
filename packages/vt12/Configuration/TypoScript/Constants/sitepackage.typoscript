@@ -1,0 +1,10 @@
+vt12 {
+    rootUid = 1
+    logoFile = EXT:vt12/Resources/Public/Icons/my_logo.png
+    logoAlt = Logo VT12
+    logoTitle = Zur Startseite
+    logoHeight = 100
+
+    metaNavPid = 9
+    copyrightText = Copyright &copy; HaJuSan
+}

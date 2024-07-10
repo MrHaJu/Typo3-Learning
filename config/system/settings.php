@@ -146,9 +146,10 @@ return [
             'security.usePasswordPolicyForFrontendUsers' => true,
         ],
         'sitename' => 'TYPO3 Videotraining',
-        'systemLocale' => 'en_GB.utf8',
+        'systemLocale' => 'de_DE.utf8',
         'systemMaintainers' => [
             1,
+            3,
         ],
     ],
 ];

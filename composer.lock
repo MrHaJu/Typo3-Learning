@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6d4f4e950350e042a4f1790be25ef53a",
+    "content-hash": "8b24db278a799931a3a27c47744b1ebc",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1367,6 +1367,37 @@
                 "source": "https://github.com/Masterminds/html5-php/tree/2.9.0"
             },
             "time": "2024-03-31T07:05:07+00:00"
+        },
+        {
+            "name": "mrhaju/vt12",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./packages/vt12",
+                "reference": "3f8658eb2510770d4be66a5f57c1bf2cfa11dcc3"
+            },
+            "require": {
+                "typo3/cms-fluid-styled-content": "^12.4"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "vt12"
+                }
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Andreas Huppertz",
+                    "email": "hamacher.design@googlemail.com"
+                }
+            ],
+            "description": "Template",
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "nikic/php-parser",
@@ -7742,7 +7773,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "mrhaju/vt12": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

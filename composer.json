@@ -36,12 +36,19 @@
         "typo3/cms-viewpage": "^12.4",
         "typo3/cms-webhooks": "^12.4",
         "typo3/cms-workspaces": "^12.4",
-        "typo3/minimal": "^12"
+        "typo3/minimal": "^12",
+        "mrhaju/vt12": "@dev"
     },
     "config": {
         "allow-plugins": {
             "typo3/class-alias-loader": true,
             "typo3/cms-composer-installers": true
+        }
+    },
+    "repositories": {
+        "local": {
+            "type": "path",
+            "url": "./packages/*"
         }
     }
 }

@@ -20,3 +20,4 @@
 vendor/
 typo3temp/
 var/
+*.Zone.Identifier
